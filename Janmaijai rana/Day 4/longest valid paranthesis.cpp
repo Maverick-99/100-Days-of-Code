@@ -1,3 +1,49 @@
+##ALTERNATE AND BEST SOLUTION
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+  int t;
+  cin>>t;
+  while(t){
+    string s;
+    cin>>s;
+    
+    stack<int> sta;
+    int r = sta.size();
+    int len=0,maxlen=0;
+    sta.push(-1);
+
+    for(int i=0;i<s.length();i++){
+      if(s[i]==')' && s[sta.top()] == '('){
+        sta.pop();
+        len = i-sta.top(); 
+      }else{
+        sta.push(i);
+      }
+      
+      if(len > maxlen){
+        maxlen = len;
+      }
+    }
+    
+    cout<<maxlen<<endl;
+    t--;
+  }
+}
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+    
+**ANOTHER SOLUTION
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -69,5 +115,10 @@ int main(){
 t--;
     }
 }
+
+
+
+
+
 
 
