@@ -1,3 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int t,n;
+    cin>>t;
+    while(t){
+        int n;
+        cin>>n;
+        
+        for(int i=2;i<=sqrt(n);i++){
+            while(n%i == 0){
+                n = n/i;
+            }
+        }
+        
+        cout<<n<<endl;
+        
+        t--;
+    }
+}
+
+
+
+
+########################################################################################
+
 #include <iostream>
 #include <math.h>
 using namespace std;
