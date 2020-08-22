@@ -1,6 +1,3 @@
-# Checkout:-
- * Reorder List
-
 
 
 ## INTRODUCTION ##
